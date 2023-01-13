@@ -1,0 +1,752 @@
+/*=====Estilos generales=====*/
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    font-size: 16px;
+}
+h2{
+    color: #fff;
+    font-weight: 900;
+    margin: 30px;
+}
+
+.header{
+    width: 100%;
+}
+.logo{
+    color: #ADADAD;
+    width: 120px;
+    height: 25px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 3vh;
+}
+.ham{
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    background-color: transparent;
+    display: none;
+}
+.ham span{
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 20px;
+    margin: 10px auto;
+    border-radius: 2px;
+
+}
+.enlaces-menu{
+    display: flex;
+    padding: 0;
+}
+.enlaces-menu li{
+    padding: 10px;
+    list-style-type: none;
+}
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #ADADAD;
+    font-weight: 600;
+}
+.enlaces-menu li a:hover{
+    color: #fff;
+}
+ 
+/*==============================
+        FIRST MOBILE
+===============================*/
+/*Menu de navegacion*/
+
+@media (max-width:480px){
+
+    body{
+        overflow: hidden;
+    }
+    /*****NAV*****/
+    .logo{
+        padding-left: 25px;
+    }
+    .ham{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 80vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        background-color:  #17202A;
+        opacity: 0;
+        
+    }   
+    .enlaces-menu li{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        
+    }
+    .enlaces-menu li a{
+        color: #f1f1f1;
+    }
+    
+    @keyframes muestraMenu {
+        from{opacity: 0;}
+        to{opacity: 1;}   
+     }
+     .br-1.animado{
+        transform: rotate(-45deg) translate(-10px, 8px);
+     }
+     .br-2.animado{
+        opacity: 0;
+     }
+     .br-3.animado{
+        transform: rotate(45deg) translate(-10px, -8px);
+     }
+    .enlaces-menu.activado{
+        display: flex;
+        animation: muestraMenu 350ms ease-in-out both;
+    }
+/*****CONTENIDO HEADER*****/
+.cont__header{
+    width: 100%;
+    padding: 30px;  
+    display: grid;
+    grid-auto-rows: auto;
+    justify-content: center;
+}
+.contenido{
+    display: grid;
+    justify-items: center;
+    
+}
+.img{
+    background-image: url(/assets/Rectangle\ 1.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+.cont__header .cont__texto{
+    display: grid;
+    justify-items: center;
+    margin-top: 20px;
+    line-height:50px;
+}
+.cont__texto p{
+    color: #ADADAD;
+    font-weight: bold;
+    font-size: 25px;
+}
+.cont__texto h1{
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+}
+ .cont__iconos img{
+    margin-left: 15px;
+    margin-right: 15px; 
+    font-size: 40px; 
+    padding-top: 30px;
+    color: #ADADAD;
+}
+
+/*****SECCION ACERCA DE MÍ*****/
+.info{
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+.info h1{
+    padding: 20px;
+    font-weight: 800;
+}
+.text__info{
+    color: #ADADAD;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/*****SECCION DEL MAIN CONTAINER*****/
+.main__cont{
+    margin: 0 auto;
+    width: 90%;
+}
+.cont__habilidades{
+    margin: 5px;
+}
+.cont__habilidades h2{
+    text-align: center;
+}
+.cont__img{
+text-align: center;
+padding: 20px;
+}
+.cont__img img{
+    background-color: #111111 ;
+    padding: 25px;
+    border-radius: 50%;
+}
+.cont__img p{
+    text-align: center;
+    color: #ADADAD;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 18px;
+/*****SECCION DE EXPERIENCIA*****/
+}
+.cont__experiencia{
+    margin: 5px;
+    padding: 20px;
+}
+.cont__info-exp{
+    display: flex;
+    column-gap: 100px;
+    border-bottom: 1px solid #ADADAD;
+    padding: 20px;
+}
+.cont__info-exp:nth-child(4){
+    border-bottom: none;
+}
+.titulo__experiencia{
+    text-align: center;
+}
+.info__date{
+    color: #ADADAD;
+}
+.info__empresa{
+    color: #fff;
+}
+.salto{
+    color: #ADADAD;
+}
+
+/*****SECCION PORTAFOLIO*****/
+.portafolio{
+    margin: 5px;
+}
+.img-portafolio img{
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    
+}
+
+/*****SECCION CONTACTO*****/
+.contacto-cont{
+    display: grid;
+    color: #ADADAD;
+    grid-template-columns: 150px 1fr;
+}
+.contacto__info{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contacto__info img{
+    border: 1px solid #ADADAD;
+    padding: 30px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.text__contacto{
+    margin-bottom: 8px;
+}
+
+/*****SECCION FOOTER*****/
+.footer{
+    width: 90%;
+    margin: 0 auto;
+    height: 100px;
+    padding: 20px;
+    color: #ADADAD;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+
+}
+}
+
+
+@media (max-width:768px){
+    .img{
+        background-image: url(/assets/Rectangle\ 45.png);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        width: 350px;
+        height: 400px;
+    }
+    
+    body{
+        overflow: hidden;
+    }
+    /*****SECCION MENU*****/
+    .logo{
+        padding-left: 25px;
+    }
+    .ham{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 80vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        background-color:  #17202A;
+        opacity: 0;
+        
+    }   
+    .enlaces-menu li{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        
+    }
+    .enlaces-menu li a{
+        color: #f1f1f1;
+    }
+    
+    @keyframes muestraMenu {
+        from{opacity: 0;}
+        to{opacity: 1;}   
+     }
+     .br-1.animado{
+        transform: rotate(-45deg) translate(-10px, 8px);
+     }
+     .br-2.animado{
+        opacity: 0;
+     }
+     .br-3.animado{
+        transform: rotate(45deg) translate(-10px, -8px);
+     }
+    .enlaces-menu.activado{
+        display: flex;
+        animation: muestraMenu 350ms ease-in-out both;
+    }
+    /*****SECCION HEADER*****/
+    .cont__header{
+        width: 90%;
+        padding: 30px;  
+        display: grid;
+        grid-auto-rows: auto;
+        justify-content: center;
+    }
+    .contenido{
+        display: grid;
+        justify-items: center;
+        padding: 20px;
+        
+    }
+    .cont__header .cont__texto{
+        display: grid;
+        justify-items: center;
+        margin-top: 20px;
+        line-height:50px;
+    }
+    .cont__texto p{
+        color: #ADADAD;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .cont__texto h1{
+        color: #fff;
+        font-weight: 900;
+        font-size: 60px;
+        text-align: center;
+        line-height: 80px;
+    }
+     .cont__iconos img{
+        margin-left: 15px;
+        margin-right: 15px;  
+        padding-top: 30px;
+        color: #ADADAD;
+    }
+    .info{
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+    }
+    .info h2{
+        padding: 20px;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .text__info{
+        color: #ADADAD;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    
+    /*****SECCION DEL MAIN CONTAINER*****/
+
+    .main__cont{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    /*****SECCION DE HABILIDADES*****/
+    .cont__habilidades{
+        margin: 5px;
+    }
+    .cont__habilidades h2{
+        text-align: center;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .grid__habilidades{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cont__img{
+    text-align: center;
+    padding: 20px;
+    }
+    .cont__img img{
+        background-color: #111111 ;
+        padding: 25px;
+        border-radius: 50%;
+    }
+    .cont__img p{
+        text-align: center;
+        color: #ADADAD;
+        padding: 10px;
+        font-weight: 900;
+        font-size: 18px;
+    }
+    /*****SECCION DE EXPERIENCIA*****/
+    .cont__experiencia{
+        margin: 5px;
+        padding: 20px;
+    }
+    .cont__info-exp{
+        display: flex;
+        column-gap: 250px;
+        border-bottom: 1px solid #ADADAD;
+        padding: 20px;
+    }
+    .cont__info-exp:nth-child(4){
+        border-bottom: none;
+    }
+    .titulo__experiencia{
+        padding: 20px;
+        text-align: center;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .info__date{
+        color: #ADADAD;
+    }
+    .info__empresa{
+        color: #fff;
+    }
+    .salto{
+        color: #ADADAD;
+    }
+    /*****SECCION DE PORTAFOLIO*****/
+    .portafolio{
+        margin: 5px;
+    }
+    .title__portafolio{
+        padding: 20px;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .img-portafolio{
+        display: flex;
+        gap: 25px;
+    }
+    .img-portafolio img{
+        width: 33%;
+        object-fit: cover;
+        margin-bottom: 30px;
+        
+    }
+    /*****SECCION DE CONTACTO*****/
+    .contacto-cont{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        color: #ADADAD;
+        
+    }
+    .contacto__info{
+        width: 40%;
+        text-align: center;
+    }
+    .title__contacto{
+        padding: 20px;
+        text-align: center;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .contacto__info img{
+        margin:0 auto;
+        margin: 20px;
+        border: 1px solid #ADADAD;
+        padding: 30px;
+        border-radius: 50%;
+    }
+    .text__contacto{
+        margin-bottom: 8px;
+    }
+    /*****SECCION FOOTER*****/
+    .footer{
+        width: 100%;
+        margin: 0 auto;
+        height: 100px;
+        margin-top: 50px;
+        padding: 20px;
+        color: #ADADAD;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 900;
+    
+    }
+}
+
+
+/*Version Desktop*/
+@media (min-width:769px){
+    .img{
+        background-image: url(/assets/Rectangle\ 45.png);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        width: 350px;
+        height: 400px;
+    }
+    body{
+        overflow: hidden;
+    }
+    nav{   
+        padding-top: 30px;
+    }
+    .cont__header{
+        width: 100%;
+        padding: 40px;  
+        display: grid;
+        grid-auto-rows: auto;
+        justify-content: center;
+    }
+    .contenido{
+        display: grid;
+        justify-items: center;
+        padding: 20px;
+        
+    }
+    .cont__header .cont__texto{
+        display: grid;
+        justify-items: center;
+        margin-top: 20px;
+        line-height:50px;
+    }
+    .cont__texto p{
+        color: #ADADAD;
+        font-weight: bold;
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    .cont__texto h1{
+        color: #fff;
+        font-weight: 900;
+        font-size: 80px;
+        text-align: center;
+        line-height: 90px;
+    }
+     .cont__iconos img{
+        margin-left: 15px;
+        margin-right: 15px;  
+        padding-top: 30px;
+        color: #ADADAD;
+    }
+    .info{
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+    }
+    .info h2{
+        padding: 20px;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .text__info{
+        color: #ADADAD;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    
+    /*Seccion del main container*/
+    .main__cont{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .cont__habilidades{
+        margin: 5px;
+    }
+    .cont__habilidades h2{
+        text-align: center;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .grid__habilidades{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cont__img{
+    text-align: center;
+    padding: 20px;
+    }
+    .cont__img img{
+        background-color: #111111 ;
+        padding: 25px;
+        border-radius: 50%;
+    }
+    .cont__img p{
+        text-align: center;
+        color: #ADADAD;
+        padding: 10px;
+        font-weight: 900;
+        font-size: 18px;
+    }
+    .cont__experiencia{
+        margin: 5px;
+        padding: 20px;
+    }
+    .cont__info-exp{
+        display: flex;
+        width: 80%;
+        column-gap: 200px;
+        border-bottom: 1px solid #ADADAD;
+        padding: 20px;
+        margin-left: 120px;   
+    }
+    .cont__info-exp:nth-child(4){
+        border-bottom: none;
+    }
+    .titulo__experiencia{
+        padding: 20px;
+        text-align: center;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .info__date{
+        color: #ADADAD;
+        font-size: 25px;
+    }
+    .info__empresa{
+        color: #fff;
+        font-size: 25px;
+    }
+    .salto{
+        color: #ADADAD;
+        font-size: 25px;
+    }
+    .portafolio{
+        margin: 5px;
+    }
+    .title__portafolio{
+        padding: 20px;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .img-portafolio{
+        display: flex;
+        gap: 25px;
+    }
+    .img-portafolio img{
+        width: 33%;
+        object-fit: cover;
+        margin-bottom: 30px;
+        
+    }
+    .contacto-cont{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        color: #ADADAD;
+        
+    }
+    .contacto__info{
+        width: 40%;
+        text-align: center;
+    }
+    .title__contacto{
+        padding: 20px;
+        text-align: center;
+        font-weight: 900;
+        font-size: 48px;
+    }
+    .contacto__info img{
+        margin:0 auto;
+        margin: 20px;
+        border: 1px solid #ADADAD;
+        padding: 30px;
+        border-radius: 50%;
+    }
+    .text__contacto{
+        margin-bottom: 8px;
+    }
+    .footer{
+        width: 100%;
+        margin: 0 auto;
+        height: 100px;
+        margin-top: 50px;
+        padding: 20px;
+        color: #ADADAD;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 900;
+    
+    }
+}
+
+
+
+
+
+
+
+ 
