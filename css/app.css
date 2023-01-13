@@ -71,9 +71,6 @@ nav{
 
 @media (max-width:480px){
 
-    body{
-        overflow: hidden;
-    }
     /*****NAV*****/
     .logo{
         padding-left: 25px;
@@ -302,9 +299,6 @@ padding: 20px;
         height: 400px;
     }
     
-    body{
-        overflow: hidden;
-    }
     /*****SECCION MENU*****/
     .logo{
         padding-left: 25px;
@@ -555,9 +549,7 @@ padding: 20px;
         width: 350px;
         height: 400px;
     }
-    body{
-        overflow: hidden;
-    }
+  
     nav{   
         padding-top: 30px;
     }
